@@ -34,6 +34,10 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+const http = require("http");
+setInterval(function() {
+  http.get("http://bear-crypto.herokuapp.com");
+}, 300000);
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
