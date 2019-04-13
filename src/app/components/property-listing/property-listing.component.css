@@ -1,5 +1,5 @@
 .parent {
-  background: #d6ebfd;
+  background: url("../../../assets/bg.jpg");
 }
 
 .container {
@@ -46,12 +46,10 @@ thead th {
   background-repeat: no-repeat;
 }
 
-td.opened {
+span.opened {
   color: #41c841;
 }
-td.closed {
+span.closed {
   color: #ff0018;
 }
-td.closed > span, td.opened > span {
-  color: #212529;
-}
+

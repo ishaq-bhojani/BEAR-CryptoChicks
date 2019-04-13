@@ -8,6 +8,9 @@ import {AppRoutes} from './routes/routes';
 import { AddPropertyComponent } from './components/add-property/add-property.component';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { PropertyListingComponent } from './components/property-listing/property-listing.component';
+import { FilterPipe } from './filters/filter.pipe';
+import {FormsModule} from "@angular/forms";
+import { ExactSearchPipe } from './filters/exact-search.pipe';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { PropertyListingComponent } from './components/property-listing/property
     LoginComponent,
     AddPropertyComponent,
     HeaderComponent,
-    PropertyListingComponent
+    PropertyListingComponent,
+    FilterPipe,
+    ExactSearchPipe
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
