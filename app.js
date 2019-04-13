@@ -9,6 +9,14 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
+app.get("*", function(req, res, next) {
+  if (req.get("host") !== "localhost:3000" && req.headers["x-forwarded-proto"] !== "https") {
+    res.redirect("https://" + req.get("host") + req.url);
+  } else {
+    next();
+  }
+});
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -38,6 +46,7 @@ const https = require("https");
 setInterval(function() {
   https.get("https://bear-crypto.herokuapp.com");
 }, 300000);
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
