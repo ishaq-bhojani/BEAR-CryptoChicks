@@ -23,6 +23,7 @@
                 <th scope="col">Property Type</th>
                 <th scope="col">Area</th>
                 <th scope="col">Address</th>
+                <th scope="col">Bidding</th>
                 <th scope="col">Highest Bid</th>
               </tr>
               </thead>
@@ -31,6 +32,10 @@
                 <th scope="row">{{property.type}}</th>
                 <td>{{property.area}}</td>
                 <td>{{property.address}}</td>
+                <td [ngClass]="{ 'opened': property.status, 'closed': !property.status}">
+                  {{property.status ? 'Open' : 'Closed'}}
+                  <span> - (will {{property.status ? 'close' : 'open'}}
+                  on {{property.changeDate}})</span></td>
                 <td>{{property.highestBid}}</td>
               </tr>
               </tbody>

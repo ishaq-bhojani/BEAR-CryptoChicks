@@ -45,3 +45,13 @@ thead th {
   padding: 0;
   background-repeat: no-repeat;
 }
+
+td.opened {
+  color: #41c841;
+}
+td.closed {
+  color: #ff0018;
+}
+td.closed > span, td.opened > span {
+  color: #212529;
+}
