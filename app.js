@@ -34,9 +34,9 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-const http = require("http");
+const https = require("https");
 setInterval(function() {
-  http.get("http://bear-crypto.herokuapp.com");
+  https.get("https://bear-crypto.herokuapp.com");
 }, 300000);
 // error handler
 app.use(function(err, req, res, next) {
