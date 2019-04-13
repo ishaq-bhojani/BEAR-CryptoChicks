@@ -1,0 +1,38 @@
+#navbarNav {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.active .nav-link {
+  background: #293441
+}
+
+.nav-logout {
+  margin-left: auto;
+  order: 3;
+}
+
+.header-top {
+  padding: 10px 0;
+}
+
+.header-top span {
+  margin-left: 10px;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.header-top img {
+  height: 30px;
+}
+.custom-header-ul{width: 100%;}
+.custom-header-ul .nav-item a{padding:10px 20px;font-size:12px; }

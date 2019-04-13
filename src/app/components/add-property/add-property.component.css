@@ -1,0 +1,59 @@
+.parent {
+  background: #d6ebfd;
+}
+
+.container {
+  background: white;
+  height: calc(100vh - 90px);
+}
+
+.table-box .row-margin h3 {
+  margin-top: 20px;
+}
+
+.table-box input {
+  border: 1px solid #a0a2a5;
+}
+
+label:not(.form-check-label) {
+  margin-bottom: 4px;
+  margin-top: 25px;
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+label:not(.form-check-label), input[type='text'], select {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+input:not(.form-check-input), select {
+  height: 40px;
+  border-color: #a0a2a5;
+  outline: none;
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 0 15px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.col-md-6 {
+  height: 50px;
+}
+
+.form-check-label {
+  line-height: 50px;
+}
+
+.form-check-input {
+  position: relative;
+  margin: 0 10px;
+}

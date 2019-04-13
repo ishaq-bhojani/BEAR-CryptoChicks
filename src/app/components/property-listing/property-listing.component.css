@@ -1,0 +1,47 @@
+.parent {
+  background: #d6ebfd;
+}
+
+.container {
+  background: white;
+  height: calc(100vh - 90px);
+}
+
+.content {
+  padding: 10px;
+}
+
+th, td {
+  line-height: 40px;
+  text-align: center;
+}
+
+thead th {
+  padding: 0;font-size: 13px;
+  text-align: center;
+}
+
+.search-form {
+  max-width: 260px;
+  width: 100%;
+  float: right;
+  display: block;
+}
+
+.search-form .form-control {
+  width: 100%;
+  margin: 0;
+  display: block;
+}
+
+.custom-submit-btn {
+  background: url("../../../assets/search-icon.png");
+  position: absolute;
+  right:25px;
+  top:7px;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  padding: 0;
+  background-repeat: no-repeat;
+}

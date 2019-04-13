@@ -1,0 +1,110 @@
+<app-header name="Add Property"></app-header>
+<div class="parent">
+  <div class="container">
+    <div class="content table-box row">
+      <div class="row-margin col-sm-12">
+      <h3>ADD YOUR PROPERTY</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="type">Type</label>
+          <select id="type">
+            <option value="shop" selected>Shop</option>
+            <option value="home">Home</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="area-type">Area Type</label>
+          <select id="area-type">
+            <option value="foot" selected>Square Feet</option>
+            <option value="yards">Square Yards</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="area">Area</label>
+          <input id="area" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="no">Plot/Shop No</label>
+          <input id="no" type="text">
+        </div>
+        <div class="col-md-4">
+          <label for="address">Address</label>
+          <input id="address" type="text">
+        </div>
+        <div class="col-md-4">
+          <label for="price">Base Price</label>
+          <input id="price" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" id="amenities">
+          <label for="amenities">Amenities</label>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <!--<input type="checkbox"> Option 01-->
+            </div>
+            <div class="col-md-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck2">
+              <label class="form-check-label" for="exampleCheck2">Check me out</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck3">
+              <label class="form-check-label" for="exampleCheck3">Check me out</label>
+            </div>
+            <div class="col-md-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck4">
+              <label class="form-check-label" for="exampleCheck4">Check me out</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck5">
+              <label class="form-check-label" for="exampleCheck5">Check me out</label>
+            </div>
+            <div class="col-md-6">
+              <input type="checkbox" class="form-check-input" id="exampleCheck6">
+              <label class="form-check-label" for="exampleCheck6">Check me out</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <label for="map">Map</label>
+          <div class="mapouter" id="map">
+            <div class="gmap_canvas">
+              <iframe width="700" height="200" id="gmap_canvas"
+                      src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                      frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
+            <style>.mapouter {
+              position: relative;
+              text-align: right;
+              height: 200px;
+              width: 700px;
+            }
+
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 200px;
+              width: 700px;
+            }</style>
+          </div>
+        </div>
+      </div>
+      <div class="row row-padding row-margin">
+        <div class="col-md-10"></div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-dark btn-block">Add Property</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
