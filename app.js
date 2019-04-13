@@ -31,7 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "dist")));
 
 /*app.use("/", indexRouter);*/
-app.use("/api/users", usersRouter);
+app.use("/api", usersRouter);
 
 app.get("/", sendIndexFile);
 app.get("*", sendIndexFile);
