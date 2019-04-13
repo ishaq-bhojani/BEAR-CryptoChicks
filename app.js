@@ -1,14 +1,16 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
+const compression = require("compression");
+const helmet = require("helmet");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+/*const indexRouter = require("./routes/index");*/
+const usersRouter = require("./routes/users");
 
-var app = express();
-
+const app = express();
+app.use(helmet({ xssFilter: { setOnOldIE: true }}));
 app.get("*", function(req, res, next) {
   if (req.get("host") !== "localhost:3000" && req.headers["x-forwarded-proto"] !== "https") {
     res.redirect("https://" + req.get("host") + req.url);
@@ -24,6 +26,7 @@ app.set("view engine", "ejs");
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(compression());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "dist")));
 
