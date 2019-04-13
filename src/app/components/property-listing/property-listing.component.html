@@ -27,23 +27,11 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <th scope="row">Shop</th>
-                <td>200 Sq.Feet</td>
-                <td>Shop # 23, Shahrah-e-Faisal, Karachi</td>
-                <td>PKR 17,000/-</td>
-              </tr>
-              <tr>
-                <th scope="row">Home</th>
-                <td>120 Sq.Yards</td>
-                <td>H # 51, Block B, Liaquat Abad, Karachi</td>
-                <td>PKR 50,000/-</td>
-              </tr>
-              <tr>
-                <th scope="row">Shop</th>
-                <td>600 Sq.Feet</td>
-                <td>Shop # 23, First floor, Abdullah Mobile Mall, Clifton, Karachi</td>
-                <td>PKR 30,000/-</td>
+              <tr *ngFor="let property of properties">
+                <th scope="row">{{property.type}}</th>
+                <td>{{property.area}}</td>
+                <td>{{property.address}}</td>
+                <td>{{property.highestBid}}</td>
               </tr>
               </tbody>
             </table>
