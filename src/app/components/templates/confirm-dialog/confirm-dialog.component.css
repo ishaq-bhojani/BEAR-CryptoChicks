@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+
+.cancel-button {
+  margin-left: 23px !important;
+}
+
+.message-dialog {
+  text-align: center;
+}
+
+.mat-dialog-content {
+  margin: 20px 0;
+}
+
+.to-center {
+  margin: 0 auto;
+}
+
+button[mat-button] {
+  margin: 0 auto;
+}

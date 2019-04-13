@@ -12,4 +12,9 @@ router.get("/properties", function(req, res) {
   res.send(chain.All("property"));
 });
 
+router.post("/addProperty", function(req, res) {
+  chain.Add("property", req.body);
+  res.send(chain.All("property"));
+});
+
 module.exports = router;

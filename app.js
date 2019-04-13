@@ -5,11 +5,13 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const compression = require("compression");
 const helmet = require("helmet");
+const bodyParser = require("body-parser");
 
 /*const indexRouter = require("./routes/index");*/
 const usersRouter = require("./routes/users");
 
 const app = express();
+
 app.use(helmet({ xssFilter: { setOnOldIE: true }}));
 app.get("*", function(req, res, next) {
   if (req.get("host") !== "localhost:3000" && req.headers["x-forwarded-proto"] !== "https") {
@@ -18,6 +20,9 @@ app.get("*", function(req, res, next) {
     next();
   }
 });
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

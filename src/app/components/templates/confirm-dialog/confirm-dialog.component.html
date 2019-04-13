@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>
+  {{data.title || 'Are You Sure?' }}
+</h1>
+<div mat-dialog-content class="message-dialog" *ngIf="!isArray;else other_content">
+  {{data.message}}
+</div>
+<ng-template #other_content>
+  <div mat-dialog-content *ngFor="let message of data.message; let i=index">
+    {{i + 1}}. {{message}}.
+  </div>
+</ng-template>
+<div mat-dialog-actions class="text-center">
+  <button mat-button (click)="onNoClick(true)" tabindex="2"
+          [ngClass]="{'to-center': !data.showCancel}">
+    {{data.ok || 'OK'}}
+  </button>
+  <button mat-button (click)="onNoClick()" tabindex="-1" class="cancel-button"
+          *ngIf="data.showCancel">
+    {{data.cancel || 'Cancel'}}
+  </button>
+</div>
