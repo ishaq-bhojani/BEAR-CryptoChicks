@@ -18,10 +18,10 @@
         <li class="nav-item" [ngClass]="{'active' : name === 'Properties'}">
           <a class="nav-link" routerLink="/property-listings">Properties </a>
         </li>
-        <li class="nav-item" [ngClass]="{'active' : name === 'Add Property'}">
+        <li class="nav-item" [ngClass]="{'active' : name === 'Add Property'}" *ngIf="name !== 'Properties'">
           <a class="nav-link" routerLink="/add-property">Add Property </a>
         </li>
-        <li class="nav-item nav-logout">
+        <li class="nav-item nav-logout" *ngIf="name !== 'Properties'">
           <a class="nav-link">Logout</a>
         </li>
       </ul>
