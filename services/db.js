@@ -30,7 +30,7 @@ const data = [
 function add() {
   Chain.New("CryptoChicksDB");
   data.forEach(function(i) {
-    //Chain.Add ("property", i);
+    Chain.Add("property", i);
   });
 }
 add();
